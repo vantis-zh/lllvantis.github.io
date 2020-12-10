@@ -35,4 +35,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages  # deploying branch
+      - name: TencentCloud-Save Private Key
+        use: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{secrets.DEPLOY_KEY}}
+      - name: TencentCloud-Deploy
+        run: rsync -av --delete public root@vantis.club:/usr/share/nginx/vantis.club
 
