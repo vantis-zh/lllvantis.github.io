@@ -42,5 +42,5 @@ jobs:
       - name: TencentCloud-Scan Public Keys
         run: ssh-keyscan vantis.club >> ~/.ssh/known_hosts
       - name: TencentCloud-Deploy
-        run: rsync -av --delete public root@vantis.club:/usr/share/nginx/vantis.club
+        run: rsync -av --delete public/ root@vantis.club:/usr/share/nginx/vantis.club
 
