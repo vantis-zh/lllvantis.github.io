@@ -36,7 +36,7 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages  # deploying branch
       - name: TencentCloud-Save Private Key
-        use: webfactory/ssh-agent@v0.4.1
+        uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{secrets.DEPLOY_KEY}}
       - name: TencentCloud-Deploy
