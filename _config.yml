@@ -7,13 +7,13 @@ title: 长宁意面店
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: 意面
 language: en
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: https://vantis.club
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
