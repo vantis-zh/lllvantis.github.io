@@ -393,8 +393,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/lllvantis
   title: Follow me on GitHub
 
 
@@ -615,8 +615,8 @@ gitalk:
   enable: true
   github_id: lllvantis # GitHub repo owner
   repo: lllvantis.github.io # Repository name to store issues
-  client_id: d0daa72e343e006430a8 # GitHub Application Client ID
-  client_secret: 134cb9af105605e1b45cb384072c497dea26e5e3 # GitHub Application Client Secret
+  client_id: ${{secrets.GITALK_CLIENT_ID}} # GitHub Application Client ID
+  client_secret: ${{secrets.GITALK_CLIENT_SECRET}} # GitHub Application Client Secret
   admin_user: lllvantis # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment

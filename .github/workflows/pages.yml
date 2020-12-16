@@ -25,11 +25,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
+      - name: Fill Keys
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: '_config.next.yml'
+          tokenPrefix: '${{'
+          tokenSuffix: '}}'
       - name: Install Dependencies
         run: npm install
       - name: Build
         run: npm run build
-      - name: Deploy
+     - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
