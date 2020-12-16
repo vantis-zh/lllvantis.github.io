@@ -615,8 +615,8 @@ gitalk:
   enable: true
   github_id: lllvantis # GitHub repo owner
   repo: lllvantis.github.io # Repository name to store issues
-  client_id: ${{GITALK_CLIENT_ID}} # GitHub Application Client ID
-  client_secret: ${{GITALK_CLIENT_SECRET}} # GitHub Application Client Secret
+  client_id: ${GITALK_CLIENT_ID} # GitHub Application Client ID
+  client_secret: ${GITALK_CLIENT_SECRET} # GitHub Application Client Secret
   admin_user: lllvantis # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
