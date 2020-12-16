@@ -31,6 +31,9 @@ jobs:
           files: '_config.next.yml'
           tokenPrefix: '${{'
           tokenSuffix: '}}'
+        env:
+          GITALK_CLIENT_ID: ${{secrets.GITALK_CLIENT_ID}}
+          GITALK_CLIENT_SECRET: ${{secrets.GITALK_CLIENT_SECRET}}
       - name: Install Dependencies
         run: npm install
       - name: Build
