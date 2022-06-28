@@ -44,14 +44,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages  # deploying branch
-      - name: Tencent Cloud - Save Private Key
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{secrets.DEPLOY_KEY}}
-      - name: Tencent Cloud - Scan Public Keys
-        run: ssh-keyscan vantis.club >> ~/.ssh/known_hosts
-      - name: Tencent Cloud - Deploy
-        run: rsync -av --delete public/ root@vantis.club:/usr/share/nginx/vantis.club/
       - name: Oracle Cloud - Save Private Key
         uses: webfactory/ssh-agent@v0.4.1
         with:
